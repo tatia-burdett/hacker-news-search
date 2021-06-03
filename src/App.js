@@ -16,13 +16,14 @@ class App extends React.Component {
     super(props)
       this.state = {
         searchValue: '',
-        results: []
+        results: [],
+        searchHistory: []
     }
   }
 
   updateSearch = e => {
     this.setState({
-      searchValue: e.target.value
+      searchValue: e.target.value,
     })
   }
 
@@ -42,7 +43,8 @@ class App extends React.Component {
       .then(data => {
         const results = data.hits
         this.setState({
-          results
+          results,
+          searchHistory: [...this.state.searchHistory, this.state.searchValue]
         })
       })
   }
@@ -62,7 +64,10 @@ class App extends React.Component {
         />
         <Route 
           path='/history'
-          component={History}
+          render={props =>
+            <History
+              searchHistory={this.state.searchHistory}
+          />}
         />
       </div>
     )
