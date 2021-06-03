@@ -31,7 +31,6 @@ class App extends React.Component {
     const query = `query=${this.state.searchValue}`
     const url = 'http://hn.algolia.com/api/v1/search?'
     const fullUrl = url + query
-    console.log(fullUrl)
 
     fetch(fullUrl)
       .then(res => {
@@ -41,8 +40,7 @@ class App extends React.Component {
         return res.json()
       })
       .then(data => {
-        console.log(data.hits)
-        const results = data
+        const results = data.hits
         this.setState({
           results
         })
