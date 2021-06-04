@@ -1,5 +1,6 @@
 import React from 'react';
 import {Route, Link} from 'react-router-dom'
+import './App.css'
 
 import Search from './components/Search/Search'
 import History from './components/History/History'

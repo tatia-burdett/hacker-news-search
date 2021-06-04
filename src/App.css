@@ -1,0 +1,14 @@
+main {
+  padding: 20px;
+}
+
+main a {
+  text-decoration: none;
+  background-color: darkmagenta;
+  color: #fff;
+  padding: 10px;
+}
+
+main a:hover, main a:focus {
+  background-color: darkviolet;
+}
