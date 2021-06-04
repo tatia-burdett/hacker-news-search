@@ -4,13 +4,6 @@ import {Route, Link} from 'react-router-dom'
 import Search from './components/Search/Search'
 import History from './components/History/History'
 
-// Build an application that has two pages for users to go two
-  // /search -- which lets the users search the Hacker News Algolia API + dislay results
-  // /history -- shows a list of the users past searches from this session (refresh doesn't need to keep data)
-
-// React router for pages
-// Store fetch request in state in app
-
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -77,7 +70,7 @@ class App extends React.Component {
     return (
       <main>
         <Link to='/search'>Go to Search</Link>
-        {' '}
+        {' '} {/* Add space for readability */}
         <Link to='/history'>Go to History</Link>
         {this.renderRoutes()}
       </main>

@@ -15,7 +15,8 @@ class Search extends React.Component {
 
     return (
       <div>
-        <section>
+
+        <section className='search-form-container'>
           <form onSubmit={e => this.props.handleSearch(e)}>
             <input 
             type='text'
@@ -26,9 +27,11 @@ class Search extends React.Component {
             <button type='submit'>Search</button>
           </form>
         </section>
+
         <section className='search-results'>
           {renderResults}
         </section>
+
       </div>
     )
   }

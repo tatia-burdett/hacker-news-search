@@ -1,7 +1,6 @@
 import React from 'react'
 
 class History extends React.Component {
-
   render() {
     let renderHistory = this.props.searchHistory.map(res => {
       return (
