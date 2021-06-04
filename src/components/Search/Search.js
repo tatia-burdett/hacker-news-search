@@ -6,19 +6,19 @@ class Search extends React.Component {
     let results = this.props.results || []
     let renderResults = results.map(res => {
       return (
-        <ul key={res.objectID}>
-          <li>{res.title}</li>
-          <li>{res.author}</li>
-          <li>{res.url || 'n/a'}</li>
-        </ul>
+        <div key={res.objectID} className='search-results'>
+          <h2>{res.title}</h2>
+          <p>{res.author}</p>
+          <p>{res.url || 'n/a'}</p>
+        </div>
       )
     })
 
     return (
-      <div>
-
+      <div className='search-container'>
         <section className='search-form-container'>
           <form onSubmit={e => this.props.handleSearch(e)}>
+            <h1>Search</h1>
             <input 
             type='text'
             placeholder='Search'
@@ -32,7 +32,6 @@ class Search extends React.Component {
         <section className='search-results'>
           {renderResults}
         </section>
-
       </div>
     )
   }
