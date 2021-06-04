@@ -5,13 +5,15 @@ class History extends React.Component {
   render() {
     let renderHistory = this.props.searchHistory.map(res => {
       return (
-        <p key={res}>{res}</p> 
+        <li key={res}>{res}</li> 
       )
     })
 
     return (
-      <div>
-        {!renderHistory.length ? 'No search history' : renderHistory}
+      <div className='history-container'>
+        <ol>
+          {!renderHistory.length ? 'No search history' : renderHistory}
+        </ol>
       </div>
     )
   }

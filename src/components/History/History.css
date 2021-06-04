@@ -1,0 +1,9 @@
+.history-container {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.history-container p {
+  font-size: 18px;
+}
