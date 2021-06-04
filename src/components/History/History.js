@@ -1,11 +1,18 @@
 import React from 'react'
 
 class History extends React.Component {
+
   render() {
-    console.log(this.props.searchHistory)
+    let renderHistory = this.props.searchHistory.map(res => {
+      return (
+        <p key={res.id}>{res}</p> 
+      )
+    })
+
     return (
       <div>
-        History
+        {!renderHistory.length ? 'No search history' : renderHistory}
+
       </div>
     )
   }
